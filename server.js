@@ -155,10 +155,10 @@ app.post("/articles/:id", function(req, res) {
 // });
 
 // Start the server
-// app.listen(PORT, function() {
-//   console.log("App running on port " + PORT + "!");
-// });
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`App is running on port ${ PORT }`);
+app.listen(PORT, function() {
+  console.log("App running on port " + PORT + "!");
 });
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => {
+//     console.log(`App is running on port ${ PORT }`);
+// });
