@@ -36,7 +36,7 @@ mongoose.connect(MONGODB_URI);
 
 
 // Connect to the Mongo DB
-// mongoose.connect("mongodb://localhost/scraper");
+mongoose.connect("mongodb://heroku_mdx2hgqs:obo32hrdglai85a884dllo6clm@ds253840.mlab.com:53840/heroku_mdx2hgqs");
 
 // Routes
 
@@ -155,6 +155,10 @@ app.post("/articles/:id", function(req, res) {
 // });
 
 // Start the server
-app.listen(PORT, function() {
-  console.log("App running on port " + PORT + "!");
+// app.listen(PORT, function() {
+//   console.log("App running on port " + PORT + "!");
+// });
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`App is running on port ${ PORT }`);
 });
